@@ -45,7 +45,7 @@ Oracle分析云（OAC）实现RFM用户价值分类模型
 
 * OAC实例地址 `https://xxxx.oraclecloud.com`
 * OAC实例账号、密码
-* 实例数据集，点击链接下载到电脑 [示例数据集_会员消费明细](https://www.oracle.com)
+* 实例数据集，点击链接下载到电脑 [示例数据集_会员消费明细](file/示例数据集_会员消费明细.xlsx)
 
 ## 第1步：登录分析云平台
 

@@ -79,13 +79,18 @@
 	
 	<script src="https://jingangliang.github.io/imgzoom.js"></script>
 	<script>
-		setTimeout(action,"8000");
+		
+		var id = setInterval(action,	"1000");
 		
 		function action() {
+			console.log("imgzoom try");
 			var img = document.querySelectorAll('img');
-			console.log("imgzoom ready");
-			for (var i=0; i<img.length; i++) {
-				img[i].addEventListener('click', imgzoom)
+			if(img.length>0){
+				console.log("imgzoom ready");
+				for (var i=0; i<img.length; i++) {
+					img[i].addEventListener('click', imgzoom)
+			}
+			clearInterval(id);
 			}
 		};
 	</script>

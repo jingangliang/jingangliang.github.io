@@ -116,6 +116,8 @@ TIMESTAMPDIFF(SQL_TSI_DAY,最近消费时间,TIMESTAMP '2017-04-01 12:00:00')
 </copy>
 ```
 
+函数说明文档：  [analytics-cloud-documentation](https://docs.oracle.com/en/cloud/paas/analytics-cloud/acubi/functions.html#GUID-1A697795-7D1E-4296-961A-1002FDBD4F4)
+
  ![Image](img/0601计算.png )
 
 点击**验证**，如果公式正确，会弹出**已验证计算**，验证成功后，点击**应用**按钮

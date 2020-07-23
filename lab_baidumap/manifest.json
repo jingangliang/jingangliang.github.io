@@ -1,8 +1,8 @@
 {
     "tutorials": [
         {
-            "title": "OAC WORKSHOP",
-            "description": "Oracle分析云（OAC）实现RFM用户价值分类模型",
+            "title": "OAC配置百度地图",
+            "description": "Oracle分析云（OAC）配置百度地图",
             "filename": "content.md"
         }
     ]

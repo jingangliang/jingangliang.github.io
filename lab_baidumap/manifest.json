@@ -1,0 +1,9 @@
+{
+    "tutorials": [
+        {
+            "title": "OAC WORKSHOP",
+            "description": "Oracle分析云（OAC）实现RFM用户价值分类模型",
+            "filename": "content.md"
+        }
+    ]
+}

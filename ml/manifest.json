@@ -1,0 +1,9 @@
+{
+    "tutorials": [
+        {
+            "title": "Oracle Machine Learning",
+            "description": "This lab walks you through the steps to...",
+            "filename": "content.md"
+        }
+    ]
+}

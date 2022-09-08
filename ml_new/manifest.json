@@ -1,0 +1,11 @@
+{
+	 "workshoptitle": "Oracle Machine Learning",
+    "help": "livelabs-help-db_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Oracle Machine Learning",
+            "description": "This lab walks you through the steps to...",
+            "filename": "content.md"
+        }
+    ]
+}

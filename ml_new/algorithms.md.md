@@ -1,6 +1,7 @@
 # 算法设置
 
 ## 通用设置
+
 [Oracle文档  Global Settings](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmapi/DBMS_DATA_MINING.html#GUID-24047A09-0542-4870-91D8-329F28B0ED75)
 
 
@@ -21,8 +22,11 @@
 
 
 ## Apriori
-#### 概念解释
+
+### 概念解释
+
 [Oracle文档  Apriori](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmapi/apriori.html#GUID-B7D12599-FB4C-45E3-BCE4-E54A3C6F0E64)
+
 + 关联挖掘问题可以分解为以下子问题：
 	- 查找以指定的最小频率发生的一组交易中的所有项目组合。这些组合称为频繁项集。
 	- 计算频繁项目集中项目可能同时出现的规则。
@@ -30,6 +34,7 @@
 Apriori发现频率高于最小支持阈值的模式。因此，要查找涉及罕见事件的关联，该算法必须以非常低的最小支持值运行。但是，这样做可能会使枚举的项目集数量激增，尤其是在项目数量很大的情况下。这大大增加了执行时间。当数据具有大量属性时，分类或异常检测更适合发现罕见事件。
 
 ### 参数设置
+
 [Oracle文档  Global Settings](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmapi/DBMS_DATA_MINING.html#GUID-24047A09-0542-4870-91D8-329F28B0ED75)
 
 | 	设置字段	 | 	<div style="width: 7rem">设置名称</div>	 | 	设定值	 | 	描述	 | 
@@ -39,7 +44,9 @@ Apriori发现频率高于最小支持阈值的模式。因此，要查找涉及�
 | 	ODMS\_ITEM\_VALUE\_COLUMN\_NAME	 | 	商品数量列名称	 | 	列名称	 | 	包含与交易中每个项目相关联的值的列的名称。 仅当指定了用于 ODMS\_ITEM\_ID\_COLUMN\_NAME 指示数据以本机事务格式表示 的值时，才使用此设置 。 如果 使用了ASSO\_AGGREGATES ，则数据必须包括以下三列以及在AGGREGATES设置中指定的列。<br><small>Case ID，分类或数字；<br>Item ID，分类或数字， 由ODMS\_ITEM\_ID\_COLUMN\_NAME指定；<br>Item Value， 分类或数字，由ODMS\_ITEM\_VALUE\_COLUMN\_NAME指定；</small><br>如果ASSO\_AGGREGATES/Case ID和Item ID列存在，则“Item Value”列可能会出现，也可能不会出现。 “Item Value”列可以指定诸如数量（例如，3个苹果）或类型（例如，苹果电脑）之类的信息。	 | 
 
 ## CUR分解
+
 ### 概念解释
+
 [Oracle文档  CUR Matrix Decomposition](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/cur-matrix-decomposition.html#GUID-EABE920F-1196-49C0-89CD-F25E062E16EF)
 
 + CUR矩阵分解是一种低秩矩阵分解算法，明确表达在数据矩阵的少量实际列和/或实际行中。
@@ -49,6 +56,7 @@ Apriori发现频率高于最小支持阈值的模式。因此，要查找涉及�
 CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类。
 
 ### 参数设置
+
 [Oracle文档  Algorithm Settings: CUR Matrix Decomposition](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATA_MINING.html#GUID-D42F5952-1C59-431D-BACE-21C8C82AAE41)
 
 | 	设置字段	 | 	设置名称	 | 	设定值(标红是默认值)	 | 	描述	 | 
@@ -63,6 +71,7 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 ## 决策树
 
 ### 概念解释
+
 [Oracle文档  Decision Tree](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/decision-tree.html#GUID-14DE1A88-220F-44F0-9AC8-77CA844D4A63)
 
 + 像朴素贝叶斯一样，决策树算法也基于条件概率。与朴素贝叶斯不同，决策树生成规则。规则是人类可以理解的条件语句，可以在数据库中用于标识一组记录。
@@ -70,6 +79,7 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 + 使用决策树规则来验证模型。如果规则对业务专家有意义，那么这将证实模型的有效性。
 
 ### 参数设置
+
 [Oracle文档   Algorithm Settings: Decision Tree](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATA_MINING.html#GUID-03435110-D723-42FD-B4EA-39C86A039566)
 
 | 	设置字段	 | 	设置名称	 | 	设定值	 | 	描述	 | 
@@ -88,6 +98,7 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 ## 期望最大化
 
 ### 概念解释
+
 [Oracle文档  Expectation Maximization](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/expectation-maximization.html#GUID-F4D117F3-FA0C-4CA4-9034-67D12339AE90)
 
 + 混合模型的期望最大化（EM）估计是一种流行的概率密度估计技术，Oracle Data Mining使用EM来实现**基于分布的聚类**算法（EM聚类）。
@@ -98,6 +109,7 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 在基于距离的聚类中，重点放在最小化群集间距离和最大化群集内距离。基于密度的聚类可以计算聚类分配中的可靠概率。它还可以自动处理缺失值。
 
 ### 参数设置
+
 [Oracle文档   Algorithm Settings: Expectation Maximization](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATA_MINING.html#GUID-1796B451-BE1B-43BC-9839-05F5F73031C8)
 
 |设置字段	 | 	设置名称	 | 	设定值	 | 	描述	 | 
@@ -125,7 +137,9 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 
 
 ## 显式语义分析
+
 #### 概念解释
+
 [Oracle文档  Explicit Semantic Analysis](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/explicit-semantic-analysis.html#GUID-7DC30272-E234-4C7C-B7D2-29D0E5448BA6)
 
 + 显式语义分析（ESA）是用于**特征提取**的一种无监督算法，从Oracle Database 18c开始，ESA被增强为**分类**的监督算法。
@@ -133,6 +147,7 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 + 作为一种分类算法，ESA主要用于**对文本文档进行分类**。ESA的特征提取和分类版本也可以应用于数字和分类输入数据。
 
 ### 参数设置
+
 [Oracle文档   Algorithm Settings: Explicit Semantic Analysis](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATA_MINING.html#GUID-91FC543B-24E4-4D93-9D79-E95B1846F3B7)
 
 | 	设置字段	 | 	设置名称	 | 	设定值	 | 	描述	 | 
@@ -143,7 +158,9 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 | 	ESAS\_TOPN\_FEATURES	 | 	最大特征数	 | 	正整数<br> *默认值为 1000*	 | 	此设置限制每个属性的最大特征数量	 | 
 
 ## 指数平滑
+
 ### 概念解释
+
 [Oracle文档  Exponential Smoothing](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/expnential-smoothing.html#GUID-65C7E533-E403-4F71-A5FE-EC034745904F)
 
 + 指数平滑方法广泛用于**预测**。
@@ -159,6 +176,7 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 	- 直接处理不规则时间序列和缺少值的时间序列的模型。
 	
 ### 参数设置
+
 [Oracle文档   Algorithm Settings: Exponential Smoothing Models](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATA_MINING.html#GUID-A95A0A38-8A5A-4470-B49F-80D81C588BFC)
 	
 | 	设置字段	 | 	设置名称	 | 	设定值	 | 	描述	 | 
@@ -176,7 +194,9 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 
 
 ## 广义线性模型
+
 ### 概念解释
+
 [Oracle文档  Generalized Linear Models](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/generalized-linear-models.html#GUID-5E59530F-EBD9-414E-8C8B-63F8079772CE)
 
 + GLM包括并扩展了线性模型的类别。线性模型做出一组限制性假设，最重要的是，目标（因变量y）正态分布是基于具有恒定方差的预测变量的值，而与预测响应值无关。线性模型的优点及其局限性包括计算的简便性，可解释的模型形式以及计算有关拟合质量的某些诊断信息的能力。
@@ -190,6 +210,7 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 	- 具有Logit链接和二项式方差函数的**Logistic回归**。
 	
 ### 参数设置
+
 [Oracle文档   Algorithm Settings: Generalized Linear Models](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATA_MINING.html#GUID-4E3665B9-B1C2-4F6B-AB69-A7F353C70F5C)
 
 | 	设置字段	 | 	设置名称	 | 	设定值	 | 	描述	 | 
@@ -214,7 +235,9 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 | 	ODMS\_ROW\_WEIGHT\_COLUMN\_NAME	 | 	行加权因子	 | 	列名称	 | 	训练数据中包含行加权因子的列名称。 列数据类型必须为NUMBER。<br>行权重可以用作重复行的紧凑表示，例如在实验设计中，特定配置重复多次。 行权重还可用于在模型构建过程中强调某些行。 例如，将模型偏向于使用较新的行，并远离过时的数据。 | 
 
 ## k-均值
+
 ### 概念解释
+
 [Oracle文档  k-Means](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/k-means.html#GUID-AA5D4D4E-936F-474A-8919-5E7FF5EE69B1)
 
 + ķ -Means算法是基于距离的将数据划分为指定数量的聚类算法。基于距离的算法依靠距离函数来度量案例之间的相似性。根据使用的距离函数将案例分配给最近的聚类。
@@ -226,6 +249,7 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 + 这种用于k -Means的方法避免了建立多个k -Means模型的需要，并提供了始终优于传统k -Means的聚类结果。
 
 ### 参数设置
+
 [Oracle文档   Algorithm Settings: k-Means](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATA_MINING.html#GUID-7010593E-C323-4DFC-8468-D85CE41A0C3C)
 
 | 	设置字段	 | 	设置名称	 | 	设定值	 | 	描述	 | 
@@ -242,7 +266,9 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 
 
 ## 最小描述长度
+
 ### 概念解释
+
 [Oracle文档  Minimum Description Length](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/minimum-description-length.html#GUID-96A38D67-2F09-4659-976D-4DDF478555E0)
 
 + 最小描述长度（MDL）是信息理论模型的选择原则。它是信息论（信息量化研究）和学习理论（基于经验数据的泛化能力研究）中的重要概念。
@@ -252,7 +278,9 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 <div id="朴素贝叶斯"></div> 
 
 ## 朴素贝叶斯
+
 ### 概念解释
+
 [Oracle文档  Naive Bayes](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/naive-bayes.html#GUID-BB77D68D-3E07-4522-ACB6-FD6723BDA92A)
 
 + 朴素贝叶斯可用于*二分类*和*多分类*问题。朴素贝叶斯算法基于条件概率。它使用贝叶斯定理， 通过计算历史数据中值的频率和值的组合来计算概率的公式。
@@ -262,6 +290,7 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 + 为了计算B给定的概率A，该算法对A和B一起发生的情况进行计数，然后将其除以A单独发生的情况的数目。
 
 ### 参数设置
+
 [Oracle文档   Algorithm Settings: Naive Bayes](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATA_MINING.html#GUID-A04C5F4E-1303-44DC-A7DA-185C969330C8)
 
 | 	设置字段	 | 	设置名称	 | 	设定值	 | 	描述	 | 
@@ -271,7 +300,9 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 | 	NABS\_SINGLETON\_THRESHOLD	 | 	单例阈值	 | 	小数 [0,1]<br>*默认值为0* | 	算法的单例阈值。事件单独发生的概率阈值	 | 
 
 ## 神经网络
+
 ### 概念解释
+
 [Oracle文档  Neural Network](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/neural-network.html#GUID-C45971D9-A874-4546-A0EC-1FF25B229E2B)
 
 + 神经网络在Oracle数据挖掘中用于*分类*和*回归*。
@@ -280,6 +311,7 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 他们通过示例进行学习，并在学习过程中调整神经元之间连接的权重。神经网络能够解决各种各样的任务，例如计算机视觉，语音识别和各种复杂的业务问题。
 
 ### 参数设置
+
 [Oracle文档   Algorithm Settings: Neural Network](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATA_MINING.html#GUID-7793F608-2719-45EA-87F9-6F246BA800D4)
 
 | 	设置字段	 | 	设置名称	 | 	设定值	 | 	描述	 | 
@@ -299,7 +331,9 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 
 
 ## 非负矩阵分解
+
 ### 概念解释
+
 [Oracle文档  Non-Negative Matrix Factorization](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/non-negative-matrix-factorization.html#GUID-76F89641-E1D3-4B11-8319-4A152389D510)
 + 非负矩阵分解（Non-Negative Matrix Factorization，NMF）是一种先进的特征提取算法。
 当存在许多属性并且属性模棱两可或可预测性较弱时，NMF很有用。通过组合属性，NMF可以产生有意义的模式、话题或主题。
@@ -310,6 +344,7 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 	- “加息” +“利息”->“利率”
 
 ### 参数设置
+
 [Oracle文档   Algorithm Settings: Neural Network](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATA_MINING.html#GUID-E5CBCC4F-819A-4BD8-9C2B-BC4A9EE870AD)
 
 | 	设置字段	 | 	设置名称	 | 	设定值	 | 	描述	 | 
@@ -321,13 +356,16 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 | 	NMFS\_RANDOM\_SEED	 | 	随机种子	 | 	整数<br>*默认值为 –1*	 | 	算法的随机种子	 | 
 
 ## O集群
+
 ### 概念解释
+
 [Oracle文档   O-Cluster](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmapi/DBMS_DATA_MINING.html#GUID-12C659A2-0317-47C8-A05D-708FAF7DF370)
 + O-Cluster是一种快速，可扩展的基于网格的聚类算法，非常适合挖掘大型，高维数据集。该算法可以产生高质量的簇，而无需依赖用户定义的参数。
 + O-Cluster的目的是识别数据中的高密度区域，并将密集区域分成多个簇。它使用轴平行的一维（正交）数据投影来识别密度区域。该算法寻找分裂点，这些分裂点会导致不重叠且大小平衡的不同簇。
 + O-Cluster通过创建二叉树层次结构来递归操作。叶簇的数量是自动确定的。可以将算法配置为限制最大群集数。
 
 ### 参数设置
+
 [Oracle文档  Algorithm Settings: O-Cluster](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmapi/DBMS_DATA_MINING.html#GUID-12C659A2-0317-47C8-A05D-708FAF7DF370)
 
 | 	设置字段	 | 	设置名称	 | 	设定值	 | 	描述	 | 
@@ -337,14 +375,18 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 
 
 ## 随机森林
+
 ### 概念解释
+
 [Oracle文档   Random Forest](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmapi/random-forest.html#GUID-B6506C33-8555-4181-993F-CD7D48B4DA3C)
+
 + 随机森林是Oracle数据挖掘使用的**分类**算法。该算法构建树的**合集**（也称为**forest**）。
 + 该算法建立了许多决策树模型，并使用集合进行预测。通过从训练数据集中选择一个随机样本作为输入，可以构建一个单独的决策树。
 在树的每个节点上，仅选择预测变量的随机样本来计算分割点。这引入了森林中不同树木使用的数据的差异。
 参数RFOR\_SAMPLING\_RATIO和RFOR\_MTRY用于指定样本大小和在每个节点上选择的预测变量数量。用户可以ODMS\_RANDOM\_SEED在运行算法之前用于设置随机种子值。
 
 ### 参数设置
+
 [Oracle文档  Algorithm Settings: Algorithm Settings: Random Forest](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmapi/DBMS_DATA_MINING.html#GUID-481B6C67-B26E-4689-AD4C-98062D5A2117)
 
 | 	设置字段	 | 	设置名称	 | 	<div style="width: 14rem">设定值</div>	 | 	描述	 | 
@@ -356,7 +398,9 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 | 	RFOR\_SAMPLING\_RATIO	 | 	种树抽样比例	 | 	小数 (0,1]<br>*默认值为训练集样本的一半*	 | 	用于构建单个树的随机抽样的数据比例	 | 
 
 ## 奇异值分解
+
 ### 概念解释
+
 [Oracle文档   Singular Value Decomposition](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmapi/singular-value-decomposition.html#GUID-703B237F-D9C5-4543-97DD-31A914BB6A05)
 + 奇异值分解（SVD）及其密切相关的主成分分析（PCA）是一种行之有效的特征提取方法，具有广泛的应用范围。
 + Oracle Data Mining将SVD实现为特征提取算法，将PCA实现为SVD模型的特殊评分方法。
@@ -364,6 +408,7 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 + SVD和PCA除了减少尺寸外，还有许多重要的应用。这些包括矩阵求逆，数据压缩和未知数据值的插补。
 
 ### 参数设置
+
 [Oracle文档  Algorithm Constants and Settings: Singular Value Decomposition](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmapi/DBMS_DATA_MINING.html#GUID-684B3705-A314-458B-A6D9-3191DF376117)
 
 | 	设置字段	 | 	<div style="width: 8rem">设置名称</div>	 | 	设定值	 | 	描述	 | 
@@ -380,8 +425,11 @@ CUR矩阵分解可应用于各种领域，并有助于回归，分类和聚类�
 
 
 ## 支持向量机
+
 ### 概念解释
+
 [Oracle文档   Support Vector Machines](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmapi/support-vector-machines.html#GUID-FD5DF1FB-AAAA-4D4E-84A2-8F645F87C344)
+
 + 支持向量机（SVM）是一种强大的，先进的算法，具有基于Vapnik-Chervonenkis理论的强大理论基础。SVM具有强大的正则化属性。正则化是指模型对新数据的概括。
 + 因为SVM通常被视为专家的工具，该算法通常需要数据准备，调整和优化。
 Oracle Data Mining最小化了这些要求。您不需要成为专家就可以在Oracle Data Mining中构建高质量的SVM模型。例如：
@@ -389,6 +437,7 @@ Oracle Data Mining最小化了这些要求。您不需要成为专家就可以�
 	- 默认调整参数通常就足够了。
 
 ### 参数设置
+
 [Oracle文档  Algorithm Settings: Support Vector Machine](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmapi/DBMS_DATA_MINING.html#GUID-12408982-E738-4D0F-A2BC-84D895E07ABB)
 
 | 	设置字段	 | 	设置名称	 | 	设定值	 | 	描述	 | 

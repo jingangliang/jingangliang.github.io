@@ -1,6 +1,9 @@
 # 模型设置
+
 ### 通用模型设置（规范方法）
+
 [Oracle文档 45.7.11 CREATE_MODEL Procedure](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATA_MINING.html#GUID-7F525A4E-9C93-44D6-BFFF-10BC018CD4A6)
+
 + 模型名称	***model\_name***
 	- 模型的名称，格式为\[ schema\_name \.\] model_name 。 如果未指定schema，则使用您自己的schema。 有关模型命名限制，请参见使用说明。
 + 功能	***mining\_function***
@@ -38,7 +41,9 @@
 	</copy>
 	
 ## 通用模型设置（简略方法）
+
 [Oracle文档 45.7.12 CREATE_MODEL2 Procedure](https://docs.oracle.com/en/database/oracle/oracle-database/19/arpls/DBMS_DATA_MINING.html#GUID-560517E9-646A-4C20-8814-63FDA763BFD9)
+
 + 模型名称	***model\_name***
 	- 模型的名称，格式为\[ schema\_name \.\] model_name 。 如果未指定schema，则使用您自己的schema。 有关模型命名限制，请参见使用说明。
 + 功能 ***mining\_function***

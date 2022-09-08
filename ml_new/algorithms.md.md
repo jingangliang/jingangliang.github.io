@@ -1,5 +1,7 @@
 # 算法设置
 
+## Introduce ##
+
 ## 通用设置
 
 [Oracle文档  Global Settings](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmapi/DBMS_DATA_MINING.html#GUID-24047A09-0542-4870-91D8-329F28B0ED75)

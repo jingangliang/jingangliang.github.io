@@ -1,5 +1,7 @@
 # 选择功能
 
+## Introduce ##
+
 ## 监督学习
 + 属性重要性 ***ATTRIBUTE_IMPORTANCE***
 	- 作用：确定在预测目标属性中最重要的属性

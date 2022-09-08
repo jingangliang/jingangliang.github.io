@@ -22,11 +22,6 @@
       {
         "title": "算法设置",
         "filename": "algorithms.md"
-      },
-      {
-        "title": "Need Help?",
-        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
       }
     ]
 }
